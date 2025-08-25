@@ -10,11 +10,11 @@ var randomKey = "ThisIsARandomKey"
 
 func TestGetAPIKey(t *testing.T) {
 	tests := map[string]struct {
-		headerKeyName string
+		headerKeyName  string
 		headerKeyValue string
-		want string
+		want           string
 	}{
-		"get key normal": {"Authorization", "ApiKey " + randomKey, randomKey},
+		"get key normal":            {"Authorization", "ApiKey " + randomKey, randomKey},
 		"get key with more options": {"Authorization", "ApiKey " + randomKey + " This is extra", randomKey},
 	}
 
