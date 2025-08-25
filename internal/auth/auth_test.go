@@ -16,7 +16,6 @@ func TestGetAPIKey(t *testing.T) {
 	}{
 		"get key normal": {"Authorization", "ApiKey " + randomKey, randomKey},
 		"get key with more options": {"Authorization", "ApiKey " + randomKey + " This is extra", randomKey},
-		"get key broken": {"Authorization", "ApiKey ", randomKey},
 	}
 
 	for name, curTest := range tests {
